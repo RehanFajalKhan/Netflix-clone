@@ -1,4 +1,6 @@
+import { createUser } from "@/app/lib/action";
 import FormWrapper from "@/app/ui/auth/form-card";
+
 
 export default function Register() {
   return (
@@ -10,6 +12,7 @@ export default function Register() {
         hrefLabel="Login"
         isRegister={true}
         hrefBackLink="login"
+        f={createUser}
       >
       </FormWrapper>
     </>

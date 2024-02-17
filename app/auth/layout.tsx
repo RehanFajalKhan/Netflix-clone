@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="h-full w-full bg-[url('/images/background.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
+    <div className="relative h-full w-full bg-[url('/images/background.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
       <div className="bg-black w-full h-full lg:bg-opacity-50">
         <nav className="px-5 py-5">
           <Link href='/'>
@@ -14,6 +14,10 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
         {children}
       </div>
     </div>
+    
+  
+
+
   );
 };
 

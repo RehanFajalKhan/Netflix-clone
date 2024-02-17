@@ -8,11 +8,14 @@ interface InputProps {
 
 const Input: React.FC<InputProps> = ({ id, label, type }) => {
   return (
-    <div className="relative">
-      <input
-        type={type}
-        id={id}
-        className="
+    <>
+      <div className="relative">
+        <input
+          type={type}
+          id={id}
+          name={id}
+          aria-describedby={`${id}-error`}
+          className="
         block
         rounded-md
         px-6
@@ -29,11 +32,11 @@ const Input: React.FC<InputProps> = ({ id, label, type }) => {
         no-spinner
         invalid:border-b-1
         "
-        placeholder=" "
-      />
-      <label
-        htmlFor={id}
-        className="
+          placeholder=" "
+        />
+        <label
+          htmlFor={id}
+          className="
         absolute 
         text-md
       text-zinc-400
@@ -50,10 +53,11 @@ const Input: React.FC<InputProps> = ({ id, label, type }) => {
         peer-focus:scale-75
         peer-focus:-translate-y-3
       "
-      >
-        {label}
-      </label>
-    </div>
+        >
+          {label}
+        </label>
+      </div>
+    </>
   );
 };
 
