@@ -1,6 +1,7 @@
-export type CreateUserProps = {
-    mobileNumber: number;
-    userEmail: string;
-    password: string;
-    confirmPassword: string
-}
+export type State = {
+    errors?: {
+      email?: string[];
+      password?: string[];
+    };
+    message?: string | null;
+  };

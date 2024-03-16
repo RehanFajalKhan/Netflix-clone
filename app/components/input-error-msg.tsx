@@ -2,19 +2,19 @@ import React from "react";
 
 interface InputErrMsgProps {
   id: string;
-  state: {
+  errorState?: {
     errors?: any;
     message?: string | null;
   };
 }
-const InputErrMsg: React.FC<InputErrMsgProps> = ({ id, state }) => {
+const InputErrMsg: React.FC<InputErrMsgProps> = ({ id, errorState:state }) => {
   const errorMessages = state?.errors?.[id];
   return (
     <div
       id={`${id}-error`}
       aria-live="polite"
       aria-atomic="true"
-      className="-mt-4"
+      // className="-mt-4"
     >
       {errorMessages &&
         errorMessages.map((error: string) => (
